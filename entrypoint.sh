@@ -13,6 +13,7 @@ stop(){
 
 trap stop SIGINT SIGTERM
 /etc/init.d/logstash start
+sleep 2
 tail -f /var/log/logstash/* &
 wait
 
